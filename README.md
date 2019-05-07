@@ -9,6 +9,12 @@ AccelIO (http://www.accelio.org/) is a high-performance asynchronous reliable me
 2. Move into folder: cd JXIO</br>
 3. Set JAVA_HOME: export JAVA_HOME=/usr/java/jdk1.7.0_25/</br>
 4. Build: ./build.sh (this pulls the relevant C level Accelio library and builds everything you need)</br>
+Note:When you use linux ubuntu to run build.sh,you may meet two problems:
+1.error: Unable to find the numactl-devel header files
+Solution:apt-get install libnuma-dev
+2.Bridge.cc:22:17: fatal error: jni.h: No such file or directory
+Solution:Copy JAVA_HOME/include/jni.h and JAVA_HOME/include/linux/jni_md.h to /usr/include
+
 
 <h2>Examples:</h2>
 In examples folder there is HelloWorld example. Both client and server are single threaded. Client sends a single message
